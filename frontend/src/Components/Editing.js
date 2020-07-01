@@ -104,11 +104,11 @@ export default class Editing extends Component {
                 </div>
                 <div className={styles.Comments}>
                     <h3><u>Add Review</u></h3>
-                    <form>
-                        <textarea name="comment" placeholder="Share your thought" onChange={this.handleChange}></textarea>
+                    <form onSubmit = {this.handleSubmit}>
+                        <textarea name="comment" placeholder="Share your thought" onChange={this.handleChange} required></textarea>
                         <div className={styles.SubmitReview}>
                             <input  type="file" name="editedImage" onChange={this.addImage} required/>
-                            <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                            <button type="submit" >Submit</button>
                         </div>
                     </form>
                     <div>
